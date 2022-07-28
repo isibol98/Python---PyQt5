@@ -10,7 +10,7 @@ class MainForm(mainWin):
     def __init__(self):
         super(MainForm, self).__init__()
 
-        self.setWindowTitle("Calculator by isibol98")
+        self.setWindowTitle("Calculator v1.0 by isibol98")
         self.setGeometry(200,200,500,500)
         self.setWindowIcon(QIcon("calculator_icon.png"))
         self.initUI()
@@ -35,26 +35,30 @@ class MainForm(mainWin):
         self.btn_plus = widgets.QPushButton(self)
         self.btn_plus.setText("+")
         self.btn_plus.move(150,130)
+        self.btn_plus.resize(60,40)
         self.btn_plus.clicked.connect(self.calculate)
 
         self.btn_minus = widgets.QPushButton(self)
         self.btn_minus.setText("-")
-        self.btn_minus.move(150,170)
+        self.btn_minus.move(220,130)
+        self.btn_minus.resize(60,40)
         self.btn_minus.clicked.connect(self.calculate)
 
         self.btn_mul = widgets.QPushButton(self)
         self.btn_mul.setText("*")
-        self.btn_mul.move(150,210)
+        self.btn_mul.move(150,180)
+        self.btn_mul.resize(60,40)
         self.btn_mul.clicked.connect(self.calculate)
 
         self.btn_div = widgets.QPushButton(self)
         self.btn_div.setText("/")
-        self.btn_div.move(150,250)
+        self.btn_div.move(220,180)
+        self.btn_div.resize(60,40)
         self.btn_div.clicked.connect(self.calculate)
 
         self.lbl_res = widgets.QLabel(self)
         self.lbl_res.setText("Result: ")
-        self.lbl_res.move(150,290)
+        self.lbl_res.move(155,240)
         self.lbl_res.resize(150,24)
 
     def calculate(self):
