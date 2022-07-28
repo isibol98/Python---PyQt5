@@ -25,7 +25,7 @@ class MainForm(mainWin):
         self.txt_number1.resize(150,24)
 
         self.lbl_number2 = widgets.QLabel(self)
-        self.lbl_number2.setText("Number 1: ")
+        self.lbl_number2.setText("Number 2: ")
         self.lbl_number2.move(50,80)
 
         self.txt_number2 = widgets.QLineEdit(self)
@@ -65,13 +65,13 @@ class MainForm(mainWin):
         sender = self.sender().text()
         try:
             if sender == "+":
-                result = int(self.txt_number1.text()) + int(self.txt_number2.text())
+                result = float(self.txt_number1.text()) + float(self.txt_number2.text())
             elif sender == "-":
-                result = int(self.txt_number1.text()) - int(self.txt_number2.text())
+                result = float(self.txt_number1.text()) - float(self.txt_number2.text())
             elif sender == "*":
-                result = int(self.txt_number1.text()) * int(self.txt_number2.text())
+                result = float(self.txt_number1.text()) * float(self.txt_number2.text())
             elif sender == "/":
-                result = int(self.txt_number1.text()) / int(self.txt_number2.text())
+                result = float(self.txt_number1.text()) / float(self.txt_number2.text())
         except: #prevent shut down window
             result = "Please enter numbers"
         finally:
