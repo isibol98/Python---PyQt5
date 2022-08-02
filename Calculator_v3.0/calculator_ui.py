@@ -15,6 +15,10 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(391, 339)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setCursor(QtGui.QCursor(QtCore.Qt.WhatsThisCursor))
+        self.centralwidget.setAutoFillBackground(False)
+        self.centralwidget.setObjectName("centralwidget")
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -212,10 +216,10 @@ class Ui_MainWindow(object):
         self.centralwidget.setCursor(QtGui.QCursor(QtCore.Qt.WhatsThisCursor))
         self.centralwidget.setAutoFillBackground(False)
         self.centralwidget.setObjectName("centralwidget")
-        self.txt_number1 = QtWidgets.QLineEdit(self.centralwidget)
-        self.txt_number1.setGeometry(QtCore.QRect(20, 10, 351, 61))
-        self.txt_number1.setSizeIncrement(QtCore.QSize(15, 15))
-        self.txt_number1.setBaseSize(QtCore.QSize(15, 15))
+        self.label_enter = QtWidgets.QLineEdit(self.centralwidget)
+        self.label_enter.setGeometry(QtCore.QRect(20, 10, 351, 61))
+        self.label_enter.setSizeIncrement(QtCore.QSize(15, 15))
+        self.label_enter.setBaseSize(QtCore.QSize(15, 15))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -361,19 +365,19 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 128))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
-        self.txt_number1.setPalette(palette)
+        self.label_enter.setPalette(palette)
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
-        self.txt_number1.setFont(font)
-        self.txt_number1.setStatusTip("")
-        self.txt_number1.setStyleSheet("background-color:rgb(84, 84, 84);\n"
+        self.label_enter.setFont(font)
+        self.label_enter.setStatusTip("")
+        self.label_enter.setStyleSheet("background-color:rgb(84, 84, 84);\n"
 "color:white;\n"
 "border-style:ourset;\n"
 "border-color:white;\n"
 "border-width:2px;\n"
 "border-radius:8px;")
-        self.txt_number1.setObjectName("txt_number1")
+        self.label_enter.setObjectName("label_enter")
         self.btn_plus = QtWidgets.QPushButton(self.centralwidget)
         self.btn_plus.setGeometry(QtCore.QRect(290, 120, 81, 41))
         font = QtGui.QFont()
@@ -647,6 +651,6 @@ class Ui_MainWindow(object):
         self.btn_7.setText(_translate("MainWindow", "7"))
         self.btn_4.setText(_translate("MainWindow", "4"))
         self.btn_dot.setText(_translate("MainWindow", "."))
-        self.btn_per.setText(_translate("MainWindow", "%"))
+        self.btn_per.setText(_translate("MainWindow", "="))
         self.btn_clear.setText(_translate("MainWindow", "Clear"))
         self.btn_del.setText(_translate("MainWindow", "Del"))
