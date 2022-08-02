@@ -3,7 +3,7 @@
 
 ![](https://github.com/isibol98/Python---PyQt5/blob/main/calculator_v3.png?raw=true)
 
-<h3 align="left">Known bugs: Buttons dont work</h3>
+<h3 align="left">Known bugs: Buttons dont work + Fixed!</h3>
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
