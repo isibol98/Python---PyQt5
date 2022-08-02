@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm isibol98</h1>
-<h3 align="center">I code Calculator v3.0 due a part of Pyhton learning. I will make it better in future with new versions. Please do not hesitate sending feedback. Happy coding! :)</h3>
+<h3 align="center">I code Calculator v3.1 due a part of Pyhton learning. I will make it better in future with new versions. Please do not hesitate sending feedback. Happy coding! :)</h3>
 
 ![](https://github.com/isibol98/Python---PyQt5/blob/main/calculator_v3.png?raw=true)
 
