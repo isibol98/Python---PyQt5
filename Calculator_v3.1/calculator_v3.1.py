@@ -53,10 +53,13 @@ class CalculatorApp(widgets.QMainWindow):
             self.ui.label_enter.setText(str(ans))
         
         except:
-            msg = QMessageBox()
-            msg.setWindowTitle("Error!")
-            msg.setText("Please enter numbers.")
-            msg.exec_()
+            result = QMessageBox.warning(self,"Error","Please Enter Numbers.", QMessageBox.Ok | QMessageBox.Cancel)
+            
+            if result == QMessageBox.Ok:
+                pass
+            else:
+                widgets.qApp.quit()
+
 
 
 def app():
