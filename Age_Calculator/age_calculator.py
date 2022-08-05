@@ -14,7 +14,7 @@ class AgeCalculatorApp(widgets.QMainWindow):
         super(AgeCalculatorApp,self).__init__()
         self.ui = MainWin()
         self.ui.setupUi(self)
-        self.setWindowIcon(QIcon("calculator_icon.png"))
+        self.setWindowIcon(QIcon("age_calculator_icon.png"))
         self.ui.calculate_age_current.clicked.connect(self.calculate_current)
         self.ui.calculate_age_dates.clicked.connect(self.calculate_dates)
 
@@ -38,9 +38,6 @@ class AgeCalculatorApp(widgets.QMainWindow):
         days = (result%365)%30
         
         QMessageBox.warning(self,"Result",f"{year} Year {months} Month(s) {days} Day(s)", QMessageBox.Ok)
-
-
-
 
 
 def app():
