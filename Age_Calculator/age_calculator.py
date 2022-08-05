@@ -3,9 +3,11 @@ from PyQt5 import QtWidgets as widgets
 from PyQt5.QtWidgets import QApplication as appli, QMainWindow
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import QDate, QTime, QDateTime
+from PyQt5.QtCore import QDate
 import sys
 from age_calculator_ui import Ui_MainWindow as MainWin
+
+#by isibol98
 
 class AgeCalculatorApp(widgets.QMainWindow):
     def __init__(self):
