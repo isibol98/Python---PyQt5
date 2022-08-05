@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from PyQt5 import QtWidgets as widgets
-from PyQt5.QtWidgets import QApplication as appli, QMainWindow as mainWin, QMessageBox as msgBox
+from PyQt5.QtWidgets import QApplication as appli, QMainWindow as mainWin
+from PyQt5.QtWidgets import QMessageBox, QAbstractButton
 from PyQt5.QtGui import QIcon
 import sys
 from calculator_ui import Ui_MainWindow as MainWin
@@ -11,7 +12,6 @@ class CalculatorApp(widgets.QMainWindow):
     def __init__(self):
         super(CalculatorApp,self).__init__()
         self.ui = MainWin()
-        self.msg = msgBox()
         self.ui.setupUi(self)
         self.setWindowIcon(QIcon("calculator_icon.png"))
         self.ui.btn_0.clicked.connect(self.calculate)
@@ -53,8 +53,10 @@ class CalculatorApp(widgets.QMainWindow):
             self.ui.label_enter.setText(str(ans))
         
         except:
-            self.msg.setWindowTitle("Error!")
-            self.msg.setText("Please enter numbers.")
+            msg = QMessageBox()
+            msg.setWindowTitle("Error!")
+            msg.setText("Please enter numbers.")
+            msg.exec_()
 
 
 def app():
