@@ -9,7 +9,7 @@ from connect import myclient
 #login/signup by isibol98
 #this is for education purpose. Make sure you keep safely user data in database.
 
-class LoginApp(QtWidgets.QMainWindow):
+class LoginApp(QtWidgets.QMainWindow): 
     def __init__(self):
         super(LoginApp,self).__init__()
         self.login_ui = Ui_login_app()
@@ -26,22 +26,19 @@ class LoginApp(QtWidgets.QMainWindow):
     def login_func(self):
         username = self.login_ui.username.text()
         password = self.login_ui.password.text()
-        if username or password != "":
-            try:
-                for i in self.mycollection.find({"username":username,"password":password}):
-                    if i == None:
-                        raise Exception
-                    else:
-                        print(i)
-                        QMessageBox.warning(self,"Login Successful!","Successfully logged in account.", QMessageBox.Ok)
-            except:
-                QMessageBox.warning(self,"Failed!","Invalid username or password.", QMessageBox.Ok)
+
+        if username or password == "":
+            QMessageBox.warning(self,"Error","Please Enter Username and Password.", QMessageBox.Ok)
+        
         else:
-            result = QMessageBox.warning(self,"Error","Please Enter Username and Password.", QMessageBox.Ok | QMessageBox.Cancel)
-            if result == QMessageBox.Ok:
-                pass
-            else:
-                QtWidgets.qApp.quit()
+                for i in self.mycollection.find({"username":username,"password":password}):
+                    print(i)
+                    QMessageBox.warning(self,"Login Successful!","Successfully logged in account.", QMessageBox.Ok)
+
+                    #QMessageBox.warning(self,"Failed!","Invalid username or password.", QMessageBox.Ok)
+
+    def database_check(self):
+        pass
 
     def goto_signup(self):
         signup = SignupApp()
