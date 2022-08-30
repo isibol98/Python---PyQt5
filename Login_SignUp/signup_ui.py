@@ -29,7 +29,8 @@ class Ui_signup_app(object):
         self.usename_labe_new.setObjectName("usename_labe_new")
         self.username_new = QtWidgets.QLineEdit(login_app)
         self.username_new.setGeometry(QtCore.QRect(140, 140, 231, 31))
-        self.username_new.setStyleSheet("color:rgbrgb(255, 255, 255)")
+        self.username_new.setStyleSheet("color:rgb(255, 255, 255);\n"
+"font: 10pt \"Arial\";")
         self.username_new.setObjectName("username_new")
         self.psw_lbl_new = QtWidgets.QLabel(login_app)
         self.psw_lbl_new.setGeometry(QtCore.QRect(50, 200, 81, 31))
@@ -38,7 +39,8 @@ class Ui_signup_app(object):
         self.psw_lbl_new.setObjectName("psw_lbl_new")
         self.password_new = QtWidgets.QLineEdit(login_app)
         self.password_new.setGeometry(QtCore.QRect(140, 200, 231, 31))
-        self.password_new.setStyleSheet("color:rgbrgb(255, 255, 255)")
+        self.password_new.setStyleSheet("color:rgb(255, 255, 255);\n"
+"font: 10pt \"Arial\";")
         self.password_new.setObjectName("password_new")
         self.sign_up_button = QtWidgets.QPushButton(login_app)
         self.sign_up_button.setGeometry(QtCore.QRect(260, 310, 111, 31))
@@ -46,7 +48,8 @@ class Ui_signup_app(object):
         self.sign_up_button.setObjectName("sign_up_button")
         self.password_confirm = QtWidgets.QLineEdit(login_app)
         self.password_confirm.setGeometry(QtCore.QRect(140, 260, 231, 31))
-        self.password_confirm.setStyleSheet("color:rgbrgb(255, 255, 255)")
+        self.password_confirm.setStyleSheet("color:rgb(255, 255, 255);\n"
+"font: 10pt \"Arial\";")
         self.password_confirm.setObjectName("password_confirm")
         self.confirm_psw_lbl = QtWidgets.QLabel(login_app)
         self.confirm_psw_lbl.setGeometry(QtCore.QRect(20, 260, 111, 31))
@@ -71,7 +74,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     login_app = QtWidgets.QDialog()
-    ui = Ui_signup_app()
+    ui = Ui_login_app()
     ui.setupUi(login_app)
     login_app.show()
     sys.exit(app.exec_())
