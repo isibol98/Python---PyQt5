@@ -20,7 +20,15 @@
 
 ![](https://github.com/isibol98/Python---PyQt5/blob/main/Login_SignUp/login4.png?raw=true)
 
-<h2 align="center">-5- Sign Up Succesful</h2>
+<h2 align="center">-5- Blank Input Error</h2>
+
+![](https://github.com/isibol98/Python---PyQt5/blob/main/Login_SignUp/login5.png?raw=true)
+
+<h2 align="center">-6- Signup Successful</h2>
+
+![](https://github.com/isibol98/Python---PyQt5/blob/main/Login_SignUp/login5.png?raw=true)
+
+<h2 align="center">-7- Login Succesfull</h2>
 
 ![](https://github.com/isibol98/Python---PyQt5/blob/main/Login_SignUp/login5.png?raw=true)
 
