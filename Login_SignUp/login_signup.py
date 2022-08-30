@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from tabnanny import check
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox, QAbstractButton 
 import sys
@@ -27,23 +28,26 @@ class LoginApp(QtWidgets.QMainWindow):
         username = self.login_ui.username.text()
         password = self.login_ui.password.text()
 
-        if username or password == "":
+        if "".__eq__(username) or "".__eq__(password): #check username&password is blank or not
             QMessageBox.warning(self,"Error","Please Enter Username and Password.", QMessageBox.Ok)
-        
         else:
-                for i in self.mycollection.find({"username":username,"password":password}):
-                    print(i)
-                    QMessageBox.warning(self,"Login Successful!","Successfully logged in account.", QMessageBox.Ok)
+            self.database_check(username,password)
 
-                    #QMessageBox.warning(self,"Failed!","Invalid username or password.", QMessageBox.Ok)
-
-    def database_check(self):
-        pass
+    def database_check(self,username,password):
+        check = self.mycollection.count_documents({"username":username})
+        if check >= 1: #check username is exist in database
+            for i in self.mycollection.find({"username":username}):
+                if i["password"] == password: #check password
+                    QMessageBox.warning(self,"Logged In",f"Welcome {username}!", QMessageBox.Ok)
+                else: 
+                    QMessageBox.warning(self,"Error","Wrong password!", QMessageBox.Ok)
+        else:
+            QMessageBox.warning(self,"Error","Username is not valid.", QMessageBox.Ok)
 
     def goto_signup(self):
         signup = SignupApp()
-        widget.addWidget(signup)
-        widget.setCurrentIndex(widget.currentIndex()+1)
+        self.widget.addWidget(signup)
+        self.widget.setCurrentIndex(widget.currentIndex()+1)
 
 class SignupApp(QtWidgets.QMainWindow):
     def __init__(self):
