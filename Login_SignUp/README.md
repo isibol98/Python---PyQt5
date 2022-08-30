@@ -26,11 +26,11 @@
 
 <h2 align="center">-6- Signup Successful</h2>
 
-![](https://github.com/isibol98/Python---PyQt5/blob/main/Login_SignUp/login5.png?raw=true)
+![](https://github.com/isibol98/Python---PyQt5/blob/main/Login_SignUp/login6.png?raw=true)
 
 <h2 align="center">-7- Login Succesfull</h2>
 
-![](https://github.com/isibol98/Python---PyQt5/blob/main/Login_SignUp/login5.png?raw=true)
+![](https://github.com/isibol98/Python---PyQt5/blob/main/Login_SignUp/login7.png?raw=true)
 
 
 <h3 align="left">Languages and Tools:</h3>
