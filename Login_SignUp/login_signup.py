@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from tabnanny import check
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox, QAbstractButton 
+from PyQt5 import QtWidgets, QtGui
+from PyQt5.QtWidgets import QApplication, QMessageBox
 import sys
 from login_ui import Ui_login_app
 from signup_ui import Ui_signup_app
@@ -98,6 +98,8 @@ if __name__ == "__main__":
     widget = QtWidgets.QStackedWidget()
     mainwindow = LoginApp()
     widget.addWidget(mainwindow)
+    widget.setWindowTitle("login/signup app by isibol98")
+    widget.setWindowIcon(QtGui.QIcon("2.jpeg"))
     widget.setFixedWidth(440)
     widget.setFixedHeight(460)   
     widget.show()

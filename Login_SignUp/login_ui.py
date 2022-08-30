@@ -29,7 +29,8 @@ class Ui_login_app(object):
         self.username_label.setObjectName("username_label")
         self.username = QtWidgets.QLineEdit(login_app)
         self.username.setGeometry(QtCore.QRect(140, 160, 231, 31))
-        self.username.setStyleSheet("color:rgbrgb(255, 255, 255)")
+        self.username.setStyleSheet("color:rgb(255, 255, 255);\n"
+"font: 10pt \"Arial\";")
         self.username.setObjectName("username")
         self.psw_lbl = QtWidgets.QLabel(login_app)
         self.psw_lbl.setGeometry(QtCore.QRect(50, 220, 81, 31))
@@ -38,7 +39,8 @@ class Ui_login_app(object):
         self.psw_lbl.setObjectName("psw_lbl")
         self.password = QtWidgets.QLineEdit(login_app)
         self.password.setGeometry(QtCore.QRect(140, 220, 231, 31))
-        self.password.setStyleSheet("color:rgbrgb(255, 255, 255)")
+        self.password.setStyleSheet("color:rgb(255, 255, 255);\n"
+"font: 10pt \"Arial\";")
         self.password.setObjectName("password")
         self.login_button = QtWidgets.QPushButton(login_app)
         self.login_button.setGeometry(QtCore.QRect(260, 300, 111, 31))
@@ -48,10 +50,10 @@ class Ui_login_app(object):
         self.label_2.setGeometry(QtCore.QRect(160, 260, 121, 21))
         self.label_2.setStyleSheet("color:rgb(255, 255, 255)")
         self.label_2.setObjectName("label_2")
-        self.pushButton = QtWidgets.QPushButton(login_app)
-        self.pushButton.setGeometry(QtCore.QRect(290, 260, 75, 23))
-        self.pushButton.setStyleSheet("color:rgb(255, 255, 255); background-color:rgb(54, 54, 54)")
-        self.pushButton.setObjectName("pushButton")
+        self.signup_button = QtWidgets.QPushButton(login_app)
+        self.signup_button.setGeometry(QtCore.QRect(290, 260, 75, 23))
+        self.signup_button.setStyleSheet("color:rgb(255, 255, 255); background-color:rgb(54, 54, 54)")
+        self.signup_button.setObjectName("signup_button")
 
         self.retranslateUi(login_app)
         QtCore.QMetaObject.connectSlotsByName(login_app)
@@ -64,7 +66,7 @@ class Ui_login_app(object):
         self.psw_lbl.setText(_translate("login_app", "Password:"))
         self.login_button.setText(_translate("login_app", "Login"))
         self.label_2.setText(_translate("login_app", "Don\'t have an account?"))
-        self.pushButton.setText(_translate("login_app", "Sign Up"))
+        self.signup_button.setText(_translate("login_app", "Sign Up"))
 
 
 if __name__ == "__main__":
